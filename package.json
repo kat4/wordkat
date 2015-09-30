@@ -4,7 +4,7 @@
   "description": "wordkat has all the words and is a cat.",
   "main": "server.js",
   "scripts": {
-    "test": "test"
+    "test": "./node_modules/.bin/tape ./test/*",
   },
   "repository": {
     "type": "git",
