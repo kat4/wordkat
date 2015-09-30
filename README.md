@@ -5,11 +5,11 @@ Auto-complete and dictionary app from wordkat. The latest app from kat4.
 
 - [X] Set up repo
 - [X] Set up Code Climate
-- [ ] Set up Travis
-- [ ] Set up pre-commit hooks
+- [X] Set up Travis
+- [X] Set up pre-commit hooks
 - [X] Install tape and shot
 - [X] Install nodemon
-[ ] Istanbul
+[X] Istanbul
 - [ ] Write initial tests (hello wordkat)
 - [ ] Set up a server which passes that test
 - [ ] Deploy to Heroku
