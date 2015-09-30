@@ -12,6 +12,6 @@ Auto-complete and dictionary app from wordkat. The latest app from kat4.
 - [X] Istanbul
 - [X] Write initial tests (hello wordkat)
 - [X] Set up a server which passes that test
-- [ ] Deploy to Heroku
+- [X] Deploy to Heroku
 
 ### more soon........
