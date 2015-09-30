@@ -1,31 +1,31 @@
 {
-  "name": "wordkat",
-  "version": "1.0.0",
-  "description": "wordkat has all the words and is a cat.",
-  "main": "server.js",
-  "scripts": {
-    "test": "./node_modules/.bin/tape ./tests/*"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kat4/wordkat.git"
-  },
-  "keywords": [
-    "word",
-    "wordkat",
-    "cat",
-    "kat4"
-  ],
-  "author": "kat4",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/kat4/wordkat/issues"
-  },
-  "homepage": "https://github.com/kat4/wordkat#readme",
-  "devDependencies": {
-    "istanbul": "^0.3.21",
-    "nodemon": "^1.7.1",
-    "shot": "^1.6.1",
-    "tape": "^4.2.0"
-  }
+    "name": "wordkat",
+    "version": "1.0.0",
+    "description": "wordkat has all the words and is a cat.",
+    "main": "server.js",
+    "scripts": {
+        "test": "./node_modules/.bin/tape ./tests/*"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/kat4/wordkat.git"
+    },
+    "keywords": [
+        "word",
+        "wordkat",
+        "cat",
+        "kat4"
+    ],
+    "author": "kat4",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/kat4/wordkat/issues"
+    },
+    "homepage": "https://github.com/kat4/wordkat#readme",
+    "devDependencies": {
+        "istanbul": "^0.3.21",
+        "nodemon": "^1.7.1",
+        "shot": "^1.6.1",
+        "tape": "^4.2.0"
+    }
 }
