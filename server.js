@@ -15,7 +15,7 @@ var wordkat = (function() {
   }
 
   var server = http.createServer(handler);
-
+  server.listen(process.env.PORT || PORT);
   // server.listen(PORT, function(){
   //     console.log("Server listening on: http://localhost:%s", PORT);
   // });
