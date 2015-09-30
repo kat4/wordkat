@@ -1,13 +1,28 @@
-var http = require('http');
+var wordkat = (function() {
 
-var PORT=8080;
+  var http = require('http');
 
-function handler(request, response){
-    response.end('It Works!! Path Hit: ' + request.url);
-}
+  var PORT=8000;
 
-var server = http.createServer(handler);
+  function handler(request, response){
+    var url = request.url;
 
-server.listen(PORT, function(){
-    console.log("Server listening on: http://localhost:%s", PORT);
-});
+    if (url.indexOf('success') > -1) {
+      response.end('success');
+      }
+    console.log(request.url);
+    response.end(request.url);
+  }
+
+  var server = http.createServer(handler);
+
+  // server.listen(PORT, function(){
+  //     console.log("Server listening on: http://localhost:%s", PORT);
+  // });
+
+  return {
+    handler: handler
+  };
+}());
+
+module.exports = wordkat;
