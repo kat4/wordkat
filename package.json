@@ -4,7 +4,7 @@
     "description": "wordkat has all the words and is a cat.",
     "main": "server.js",
     "scripts": {
-        "codeclimate": "CODECLIMATE_REPO_TOKEN=a889619003456f0d1a6a13884b859d69eedec58b08db8bc5222302b5c11ebe0b codeclimate-test-reporter < lcov.info",
+        "codeclimate": "CODECLIMATE_REPO_TOKEN=a889619003456f0d1a6a13884b859d69eedec58b08db8bc5222302b5c11ebe0b codeclimate-test-reporter < ./tests/coverage/lcov.info",
         "test": "./node_modules/.bin/tape ./tests/*",
         "coverage": "istanbul cover ./node_modules/.bin/tape ./tests/*.js"
     },
