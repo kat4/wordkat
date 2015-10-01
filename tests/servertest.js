@@ -13,3 +13,20 @@ test('return the string "success"', function (t) {
 		t.end();
 	});
 });
+
+test('filter array of words from response by searchterm', function (t) {
+	Shot.inject(wordkat.handler, {method: 'GET', url: "/search/cat"}, function (res) {
+    var expected = ["catastophe", "cat", "catnip"];
+		t.deepEqual(JSON.parse(res.payload), expected, "Congrats");
+		t.end();
+	});
+});
+
+
+// test('keypress after 2 letters in inputfield triggers a request', function (t) {
+//   var textfieldValue =
+// 	Shot.inject(wordkat.handler, {method: 'GET', url: "/search/cat"}, function (res) {
+//
+// 		t.end();
+// 	});
+// });

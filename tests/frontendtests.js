@@ -8,16 +8,14 @@ setTimeout(function() {
 
 	});
 
-	var frontScript = iframe_select.contentWindow.acjs;
-	console.log(Object.keys(frontScript));
-	//;
-	test('filter array of words by first three letters', function(assert){
-		var example_array = ["catastophe", "cat", "catnip", "coldcat", "birthday", "barbeque"];
-		//var word = content.getElementById('search-box').value;
-		var word = "cat";
-		var expected = ["catastophe", "cat", "catnip"];
-		console.log(frontScript.filter_word("cat", ["catastophe", "cat", "catnip", "coldcat", "birthday", "barbeque"]));
-		assert.deepEqual(frontScript.filter_word(word, example_array), expected, "cat first test");
-	});
+	var frontScript = iframe_select.contentWindow.autocomplete;
+
+	// test('keypress after 2 letters in inputfield triggers a request', function(assert){
+	// 	var searchTerm = iframe_content.getElementById('search-box').value;
+	// 	console.log(searchTerm);
+	// 	var e = jQuery.Event("keypress");
+	// 	$("#theInputToTest").trigger(e);
+	// 	assert.equal(!!searchTerm, true);
+	// });
 
  }, 500);

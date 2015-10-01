@@ -7,8 +7,6 @@ var wordkat = (function() {
     var frontendtests = fs.readFileSync(__dirname + '/tests/frontendtests.html');
     var frontendtestsjs = fs.readFileSync(__dirname + '/tests/frontendtests.js');
     var acjs = fs.readFileSync(__dirname + '/js/ac.js');
-    var wnjs = fs.readFileSync(__dirname + '/js/wn.js');
-
     var autocomplete = require('./autocomplete.js');
     var wordnik = require('./wordnik.js');
 
@@ -25,7 +23,10 @@ var wordkat = (function() {
             response.writeHead(200,{"Content-Type": "text/html"});
             response.end(frontendtests);
         } else if (urlArr[1]===('search')) {
-           console.log(urlArr[2]);
+           var searchTerm = urlArr[2];
+           var exampleArray = ["catastophe", "cat", "catnip", "coldcat", "birthday", "barbeque"];
+           var acResponse = JSON.stringify(autocomplete.filter_word(searchTerm, exampleArray));
+           response.write(acResponse);
            response.end();//autocomplete());
         } else if (urlArr[1]===('worddef')) {
             response.end();
