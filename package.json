@@ -31,7 +31,6 @@
     "codeclimate-test-reporter": "^0.1.1",
     "istanbul": "^0.3.21",
     "nodemon": "^1.7.1",
-    "pre-commit": "^1.1.1",
     "shot": "^1.6.1",
     "tape": "^4.2.0"
   },
