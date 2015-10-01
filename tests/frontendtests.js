@@ -1,9 +1,23 @@
+var get_iframe = function() {
+		var iframe_select = document.getElementById('iframe');
+		var iframe_content = iframe_select.contentDocument || iframe_select.contentWindow.document;
+
+		return iframe_content;
+};
+
+
 test('having an h1 tag', function(assert){
-	var iframe = document.getElementById('iframe');
-	// var iframe = $('#iframe')
-	var target = iframe.contentDocument || iframe.contentWindow.document;
+	target = get_iframe();
 	var heading = target.querySelector('h1');
-	console.log(heading);
 	assert.equal(!!heading, true);
+
+});
+
+test('filter array of words by first three letters', function(assert){
+	var content = get_iframe();
+	var example_array = ["catastophe", "cat", "catnip", "coldcat", "birthday", "barbeque"];
+	var word = content.getElementById('search-box').value;
+	console.log(word);
+	assert.equal(filter_word(word, example_array), "[catastophe, cat, catnip]", "cat first test");
 
 });
