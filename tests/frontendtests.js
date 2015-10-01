@@ -18,4 +18,14 @@ setTimeout(function() {
 	// 	assert.equal(!!searchTerm, true);
 	// });
 
+	test("check we are getting a response from our nodejs server", function(assert) {
+		var done = assert.async();
+	  iframe_select.contentWindow.apiTrigger.defRequest('cat',function(data) {
+		console.log(data);
+		assert.deepEqual(Boolean(data), true, "success!");
+		done();
+	  });
+	});
+
+
  }, 500);
