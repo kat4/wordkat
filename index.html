@@ -1,14 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>WORDKAT</title>
-</head>
-<body>
-<h1>SOME HEADING</h1>
+    <style>
+        * {
+            -webkit-transition: font-size 0.3s ease;
+            -moz-transition: font-size: 0.3s ease;
+            -o-transition: font-size: 0.3s ease;
+            -ms-transition: font-size: 0.3s ease;
+        }
 
-<input type="text" placeholder=" kat4..." name="search-box" id="search-box" >
-<script src="/js/ac.js" ></script>
-<script src="/js/wn.js" ></script>
+        body {
+            font-family: helvetica, arial, sans-serif;
+        }
+
+        li.suggestion.active {
+            font-size: 2em;
+        }
+
+        li.suggestion {
+            height: 2em;
+            line-height: 2em;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        #search-box {
+            border: none;
+        }
+
+        #search-box:focus {
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>wordkat</h1>
+
+    <input type="text" placeholder=" kat4..." name="search-box" id="search-box">
+    <ul id="autocomplete-suggestions">
+
+    </ul>
+    <article id="definition-container">
+
+    </article>
+    <script src="/js/wn.js"></script>
+    <script src="/js/ac.js"></script>
 </body>
+
 </html>
