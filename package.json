@@ -1,40 +1,41 @@
 {
-    "name": "wordkat",
-    "version": "1.0.0",
-    "description": "wordkat has all the words and is a cat.",
-    "main": "server.js",
-    "scripts": {
-        "codeclimate": "CODECLIMATE_REPO_TOKEN=a889619003456f0d1a6a13884b859d69eedec58b08db8bc5222302b5c11ebe0b codeclimate-test-reporter < ./tests/coverage/lcov.info",
-        "test": "./node_modules/.bin/tape ./tests/*",
-        "coverage": "istanbul cover ./node_modules/.bin/tape ./tests/*.js"
-    },
-    "pre-commit": [
-        "coverage"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/kat4/wordkat.git"
-    },
-    "keywords": [
-        "word",
-        "wordkat",
-        "cat",
-        "kat4"
-    ],
-    "author": "kat4",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/kat4/wordkat/issues"
-    },
-    "homepage": "https://github.com/kat4/wordkat#readme",
-    "devDependencies": {
-        "istanbul": "^0.3.21",
-        "nodemon": "^1.7.1",
-        "pre-commit": "^1.1.1",
-        "shot": "^1.6.1",
-        "tape": "^4.2.0"
-    },
-    "dependencies": {
-        "request": "^2.64.0"
-    }
+  "name": "wordkat",
+  "version": "1.0.0",
+  "description": "wordkat has all the words and is a cat.",
+  "main": "server.js",
+  "scripts": {
+    "codeclimate": "CODECLIMATE_REPO_TOKEN=a889619003456f0d1a6a13884b859d69eedec58b08db8bc5222302b5c11ebe0b codeclimate-test-reporter < ./tests/coverage/lcov.info",
+    "test": "./node_modules/.bin/tape ./tests/*",
+    "coverage": "istanbul cover ./node_modules/.bin/tape ./tests/*.js"
+  },
+  "pre-commit": [
+    "coverage"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kat4/wordkat.git"
+  },
+  "keywords": [
+    "word",
+    "wordkat",
+    "cat",
+    "kat4"
+  ],
+  "author": "kat4",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kat4/wordkat/issues"
+  },
+  "homepage": "https://github.com/kat4/wordkat#readme",
+  "devDependencies": {
+    "codeclimate-test-reporter": "^0.1.1",
+    "istanbul": "^0.3.21",
+    "nodemon": "^1.7.1",
+    "pre-commit": "^1.1.1",
+    "shot": "^1.6.1",
+    "tape": "^4.2.0"
+  },
+  "dependencies": {
+    "request": "^2.64.0"
+  }
 }

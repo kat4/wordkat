@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for wordkat/wordnik.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../prettify.css">
+    <link rel="stylesheet" href="../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">wordkat/wordnik.js</span></h1>
+    <h2>
+        Statements: <span class="metric">44.44% <small>(8 / 18)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 6)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">0% <small>(0 / 2)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">44.44% <small>(8 / 18)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../index.html">All files</a> &#187; <a href="index.html">wordkat/</a> &#187; wordnik.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">var http = require('http');
+var request = require('request');
+var searchWord = "cat";
+&nbsp;
+&nbsp;
+var test = require('tape');
+var Shot = require('shot');
+var wordkat = require('./server.js');
+&nbsp;
+//Lets try to make a HTTPS GET request to the wordnik API.
+<span class="fstat-no" title="function not covered" >function wnRequest(searchTerm, callback) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    var wordnikurl = "http://api.wordnik.com:80/v4/word.json/" + searchTerm + "/definitions?limit=200&amp;includeRelated=true&amp;useCanonical=false&amp;includeTags=false&amp;api_key=83916c7411db7255406860c49b9083f65a950aff27e3c6a5d";</span>
+<span class="cstat-no" title="statement not covered" >    request.get(wordnikurl, <span class="fstat-no" title="function not covered" >function(error, response, body) {</span></span>
+<span class="cstat-no" title="statement not covered" >        if (error) {</span>
+<span class="cstat-no" title="statement not covered" >            return console.log('Error:', error);</span>
+        }
+<span class="cstat-no" title="statement not covered" >        if (response.statusCode !== 200) {</span>
+<span class="cstat-no" title="statement not covered" >            return console.log('Invalid Status Code Returned:', response.statusCode);</span>
+        } else {
+<span class="cstat-no" title="statement not covered" >            var object = JSON.parse(body);</span>
+            //console.log(object[0].text);
+<span class="cstat-no" title="statement not covered" >            if (!object[0]) {</span>
+<span class="cstat-no" title="statement not covered" >                callback('Sorry, this word is way too obscure for kat4... Search for "cat" instead.');</span>
+&nbsp;
+            } else {
+<span class="cstat-no" title="statement not covered" >                callback(object[0].text);</span>
+            }
+        }
+&nbsp;
+    });
+&nbsp;
+}
+&nbsp;
+// function ourCallback(data) {
+//   console.log(data);
+// }
+//
+&nbsp;
+&nbsp;
+// test("check we are getting a response from the API", function(t) {
+//   wnRequest("cat", function(data) {
+//     t.equal(!!data, true, "success!");
+//     t.end();
+//   });
+//
+// });
+module.exports = wnRequest;
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Oct 01 2015 21:02:57 GMT+0100 (BST)</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
