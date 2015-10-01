@@ -86,7 +86,7 @@ var wordkat = (function() {
 
 
     var server = http.createServer(handler);
-    //server.listen(process.env.PORT || PORT);
+    server.listen(process.env.PORT || PORT);
 
     return {
         handler: handler
