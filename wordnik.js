@@ -2,19 +2,41 @@ var http = require('http');
 var request = require('request');
 var searchWord = "cat";
 
+
+var test = require('tape');
+var Shot = require('shot');
+var wordkat = require('./server.js');
+
 //Lets try to make a HTTPS GET request to the wordnik API.
-var wordnikurl = "http://api.wordnik.com:80/v4/word.json/" + searchWord + "/definitions?limit=200&includeRelated=true&useCanonical=false&includeTags=false&api_key=83916c7411db7255406860c49b9083f65a950aff27e3c6a5d";
-request.get(wordnikurl, function (error, response, body) {
-    if(error){
-        return console.log('Error:', error);
+function wnRequest(searchTerm, callback) {
+
+  var wordnikurl = "http://api.wordnik.com:80/v4/word.json/" + searchTerm + "/definitions?limit=200&includeRelated=true&useCanonical=false&includeTags=false&api_key=83916c7411db7255406860c49b9083f65a950aff27e3c6a5d";
+  request.get(wordnikurl, function(error, response, body) {
+    if (error) {
+      return console.log('Error:', error);
     }
-    if(response.statusCode !== 200){
-        return console.log('Invalid Status Code Returned:', response.statusCode);
+    if (response.statusCode !== 200) {
+      return console.log('Invalid Status Code Returned:', response.statusCode);
+    } else {
+      var object = JSON.parse(response.statusCode);
+      callback(object);
+      //console.log(object[0].text);
     }
-    var object = JSON.parse(body);
-    console.log(object[0].text);
+
+  });
+
+}
+
+function ourCallback(data) {
+  console.log(data);
+}
+
+
+
+test("check we are getting a response from the API", function(t) {
+  wnRequest("cat", function(data) {
+    t.equal(data, 200, "success!");
+    t.end();
+  });
+
 });
-//wordnikRequest();
-//parse the object
-//var object = JSON.parse(body);
-    //object[0].text;
