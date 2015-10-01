@@ -29,7 +29,14 @@ var wordkat = (function() {
            response.write(acResponse);
            response.end();//autocomplete());
         } else if (urlArr[1]===('worddef')) {
-            response.end();
+            var searchTerm = urlArr[2];
+            wordnik(searchTerm,function(data){
+                console.log(data);
+                response.write(data);
+                response.end();
+            });
+
+
         } else if (urlArr[1]===('js')) {
             if(urlArr[2] ===('ac.js')){
                 response.writeHead(200,{"Content-Type": "text/html"});
@@ -40,12 +47,34 @@ var wordkat = (function() {
                 response.end(wnjs);
             }
         }
-        else{
+        else if ( urlArr.length === 1 || urlArr[1]===''){
             response.writeHead(200,{"Content-Type": "text/html"});
             response.end(index);
         }
+        else {
+          fs.readFile(__dirname + request.url, function(err, file) {
+            if (err) {
+              response.end();
+            } else {
+              var ext = request.url.split('.')[1];
+              response.writeHead(200, {
+                'Content-Type': 'text/' + ext
+              });
+            }
+            response.end(file);
+        });
+
+
+
+        }
+
         console.log(request.url);
     }
+
+
+
+
+
 
     var server = http.createServer(handler);
     server.listen(process.env.PORT || PORT);

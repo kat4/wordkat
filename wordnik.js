@@ -18,25 +18,26 @@ function wnRequest(searchTerm, callback) {
     if (response.statusCode !== 200) {
       return console.log('Invalid Status Code Returned:', response.statusCode);
     } else {
-      var object = JSON.parse(response.statusCode);
-      callback(object);
+      var object = JSON.parse(body);
       //console.log(object[0].text);
+      callback(object[0].text);
     }
 
   });
 
 }
 
-function ourCallback(data) {
-  console.log(data);
-}
+// function ourCallback(data) {
+//   console.log(data);
+// }
+//
 
 
-
-test("check we are getting a response from the API", function(t) {
-  wnRequest("cat", function(data) {
-    t.equal(data, 200, "success!");
-    t.end();
-  });
-
-});
+// test("check we are getting a response from the API", function(t) {
+//   wnRequest("cat", function(data) {
+//     t.equal(!!data, true, "success!");
+//     t.end();
+//   });
+//
+// });
+module.exports = wnRequest;
