@@ -31,4 +31,5 @@ Auto-complete and dictionary app from wordkat. The latest app from kat4.
 
 ### And theeeen
 
+- [ ] Put badges up on github
 - [ ] Make site look pretty
