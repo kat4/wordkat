@@ -1,6 +1,6 @@
-var ourSearchWord = 'cat';
+var apiTrigger = (function(){
 
-function defRequest(callback) {
+function defRequest(searchterm, callback) {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (xhttp.readyState == 4 && xhttp.status == 200) {
@@ -9,17 +9,18 @@ function defRequest(callback) {
     }
 
   };
-  xhttp.open("GET", "/worddef/" + ourSearchWord, true);
+  xhttp.open("GET", "/worddef/" + searchterm, true);
   xhttp.send();
 
 }
-defRequest(function() {
-  console.log('kablam');
-});
 
-test("check we are getting a response from the API", function(t) {
-  defRequest(function(data) {
-    t.equal(!!data, true, "success!");
-    t.end();
+var searchButton = document.getElementById('search-button');
+searchButton.addEventListener('click', function(){
+  var ourSearchWord = document.getElementById('search-box').value;
+  defRequest(ourSearchWord,function(data) {
+    console.log(data);
   });
-});
+
+} );
+
+})();

@@ -28,7 +28,14 @@ var wordkat = (function() {
            console.log(urlArr[2]);
            response.end();//autocomplete());
         } else if (urlArr[1]===('worddef')) {
-            response.end();
+            var searchTerm = urlArr[2];
+            wordnik(searchTerm,function(data){
+                console.log(data);
+                response.write(data);
+                response.end();
+            });
+
+
         } else if (urlArr[1]===('js')) {
             if(urlArr[2] ===('ac.js')){
                 response.writeHead(200,{"Content-Type": "text/html"});
@@ -39,7 +46,7 @@ var wordkat = (function() {
                 response.end(wnjs);
             }
         }
-        else if ( urlArr.length === 1 ){
+        else if ( urlArr.length === 1 || urlArr[1]===''){
             response.writeHead(200,{"Content-Type": "text/html"});
             response.end(index);
         }
