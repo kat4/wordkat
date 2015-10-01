@@ -38,12 +38,34 @@ var wordkat = (function() {
                 response.end(wnjs);
             }
         }
-        else{
+        else if ( urlArr.length === 1 ){
             response.writeHead(200,{"Content-Type": "text/html"});
             response.end(index);
         }
+        else {
+          fs.readFile(__dirname + request.url, function(err, file) {
+            if (err) {
+              response.end();
+            } else {
+              var ext = request.url.split('.')[1];
+              response.writeHead(200, {
+                'Content-Type': 'text/' + ext
+              });
+            }
+            response.end(file);
+        });
+
+
+
+        }
+
         console.log(request.url);
     }
+
+
+
+
+
 
     var server = http.createServer(handler);
     server.listen(process.env.PORT || PORT);

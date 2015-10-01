@@ -20,7 +20,7 @@ function wnRequest(searchTerm, callback) {
     } else {
       var object = JSON.parse(response.statusCode);
       callback(object);
-      //console.log(object[0].text);
+     //console.log(object[0].text);
     }
 
   });
@@ -40,3 +40,6 @@ test("check we are getting a response from the API", function(t) {
   });
 
 });
+module.exports = function() {
+  console.log('request recieved');
+};
