@@ -15,7 +15,7 @@ var wordkat = (function() {
     function handler(request, response) {
         var url = request.url;
         var urlArr = request.url.split('/');
-        console.log (urlArr);
+        console.log ('new request from', urlArr);
         if (urlArr[1]===('success')) {
             response.end('success');
         } else if (urlArr[1]===('frontendtests.js')){
@@ -24,11 +24,12 @@ var wordkat = (function() {
         } else if (urlArr[1]===('test')) {
             response.writeHead(200,{"Content-Type": "text/html"});
             response.end(frontendtests);
-        }  else if (urlArr[1]===('search')) {
-            response.end(autocomplete());
-        }else if (urlArr[1]===('worddef')) {
-            response.end(wordnik());
-        }else if (urlArr[1]===('js')) {
+        } else if (urlArr[1]===('search')) {
+           console.log(urlArr[2]);
+           response.end();//autocomplete());
+        } else if (urlArr[1]===('worddef')) {
+            response.end();
+        } else if (urlArr[1]===('js')) {
             if(urlArr[2] ===('ac.js')){
                 response.writeHead(200,{"Content-Type": "text/html"});
                 response.end(acjs);

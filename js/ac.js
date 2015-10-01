@@ -1,14 +1,22 @@
 var acjs = (function() {
   //get value from searchbar
-  search_value = document.getElementbyId("search-box").value;
-  search_array = search_value.split("");
+  search_value = document.getElementById("search-box").value;
+  //search_array = search_value.split("");
 
-  //get first 3 letters of string typed in box and send request, put that into array.
+  function defRequest() {
 
-  //when add additional letter added return a request using the previous 3 letters and a fourth
+    var xhttp = new XMLHttpRequest();
 
+    xhttp.onreadystatechange = function() {
+      if (xhttp.readyState == 4 && xhttp.status == 200) {
+        var result = xhttp.responseText;
+      }
+    };
+    xhttp.open("GET", "/search/"+search_value , true);
+    xhttp.send();
 
+  }
+
+  defRequest();
 
 }());
-
-module.exports = acjs;
