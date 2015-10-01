@@ -16,8 +16,10 @@ test('having an h1 tag', function(assert){
 test('filter array of words by first three letters', function(assert){
 	var content = get_iframe();
 	var example_array = ["catastophe", "cat", "catnip", "coldcat", "birthday", "barbeque"];
-	var word = content.getElementById('search-box').value;
-	console.log(word);
-	assert.equal(filter_word(word, example_array), "[catastophe, cat, catnip]", "cat first test");
+	//var word = content.getElementById('search-box').value;
+	var word = "cat";
+	assert.equal(acjs.filter_word(word, example_array), ["catastophe", "cat", "catnip"], "cat first test");
+
+
 
 });
