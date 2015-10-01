@@ -1,6 +1,7 @@
 # wordkat
 
 [![Code Climate](https://codeclimate.com/github/kat4/wordkat/badges/gpa.svg)](https://codeclimate.com/github/kat4/wordkat)
+[![Test Coverage](https://codeclimate.com/github/kat4/wordkat/badges/coverage.svg)](https://codeclimate.com/github/kat4/wordkat/coverage)
 
 Auto-complete and dictionary app from wordkat. The latest app from kat4.
 
