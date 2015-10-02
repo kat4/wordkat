@@ -2,7 +2,7 @@ var wordkat = (function() {
 
     var http = require('http');
     var fs = require('fs');
-    //var PORT = 8000;
+    var PORT = 8000;
     var index = fs.readFileSync(__dirname + '/index.html');
     var frontendtests = fs.readFileSync(__dirname + '/tests/frontendtests.html');
     var frontendtestsjs = fs.readFileSync(__dirname + '/tests/frontendtests.js');
@@ -80,16 +80,21 @@ var wordkat = (function() {
     }
 
 
+    function runServer() {
+      var server = http.createServer(handler);
+      server.listen(process.env.PORT || PORT);
+    }
 
 
 
-
-    var server = http.createServer(handler);
-    server.listen(process.env.PORT); //|| PORT);
+    // var server = http.createServer(handler);
+    // server.listen(process.env.PORT || PORT);
 
     return {
-        handler: handler
+        handler: handler,
+        runServer: runServer
     };
+
 }());
 
 module.exports = wordkat;
