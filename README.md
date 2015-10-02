@@ -4,7 +4,7 @@
 [![Test Coverage](https://codeclimate.com/github/kat4/wordkat/badges/coverage.svg)](https://codeclimate.com/github/kat4/wordkat/coverage)
 
 Auto-complete and dictionary app from wordkat. The latest app from kat4.
-[Go to the app](http://nameless-waters-3456.herokuapp.com/)
+[Go to the app](https://wordkat.herokuapp.com/)
 
 ### Set-up (day 1)
 
