@@ -12,8 +12,6 @@ var acServerside = (function() {
     filter_word: filter_word
   };
 
-
-  //when add additional letter added return a request using the previous 3 letters and a fourth
 }());
 
 module.exports = acServerside;
