@@ -80,19 +80,13 @@ var wordkat = (function() {
     }
 
 
-    function runServer() {
-      var server = http.createServer(handler);
-      server.listen(process.env.PORT || PORT);
-    }
 
-
-
-    // var server = http.createServer(handler);
-    // server.listen(process.env.PORT || PORT);
+    var server = http.createServer(handler);
+    server.listen(process.env.PORT || PORT);
 
     return {
-        handler: handler,
-        runServer: runServer
+        handler: handler
+
     };
 
 }());

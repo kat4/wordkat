@@ -3,8 +3,8 @@ var request = require('request');
 var searchWord = "cat";
 
 
-var test = require('tape');
-var Shot = require('shot');
+//var test = require('tape');
+//var Shot = require('shot');
 var wordkat = require('./server.js');
 
 //Lets try to make a HTTPS GET request to the wordnik API.
