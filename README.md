@@ -4,6 +4,7 @@
 [![Test Coverage](https://codeclimate.com/github/kat4/wordkat/badges/coverage.svg)](https://codeclimate.com/github/kat4/wordkat/coverage)
 
 Auto-complete and dictionary app from wordkat. The latest app from kat4.
+[Go to the app](http://nameless-waters-3456.herokuapp.com/)
 
 ### Set-up (day 1)
 
@@ -23,17 +24,17 @@ Auto-complete and dictionary app from wordkat. The latest app from kat4.
 
 ##### Pair A
 
-- [ ] Gets stuck into worknik API
-- [ ] Test getting response from wordnik
+- [X] Gets stuck into worknik API
+- [X] Test getting response from wordnik
 
 
 ##### Pair 1
 
-- [ ] Gets stuck into the http requests between front and back end
-- [ ] Test getting response from server
-- [ ] Work on autocomplete
+- [X] Gets stuck into the http requests between front and back end
+- [X] Test getting response from server
+- [X] Work on autocomplete
 
 ### And theeeen
 
-- [ ] Put badges up on github
-- [ ] Make site look pretty
+- [X] Put badges up on github
+- [?] Make site look pretty
