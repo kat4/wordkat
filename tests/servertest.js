@@ -1,6 +1,6 @@
 var test = require('tape');
 var Shot = require('shot');
-var wordkat = require('../server.js');
+var wordkat = require('../wordkat.js');
 
 test("check 1 is equal to 1", function(t) {
   t.equal(1, 1, "success!");

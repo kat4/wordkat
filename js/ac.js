@@ -18,7 +18,6 @@ var acjs = (function() {
 
     function acCallback(array) {
         var listContainer = document.getElementById('autocomplete-suggestions');
-        console.log(array);
         var growingList = "";
         var thisWord;
         for (var i = 0; i < array.length; i++) {
