@@ -83,6 +83,7 @@ var wordkat = (function() {
 
     var server = http.createServer(handler);
     server.listen(process.env.PORT || PORT);
+    console.log("to see this locally got to port 8000");
 
     return {
         handler: handler
