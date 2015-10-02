@@ -4,46 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <title>WORDKAT</title>
-    <style>
-        * {
-            -webkit-transition: font-size 0.3s ease;
-            -moz-transition: font-size: 0.3s ease;
-            -o-transition: font-size: 0.3s ease;
-            -ms-transition: font-size: 0.3s ease;
-        }
-
-        body {
-            font-family: helvetica, arial, sans-serif;
-        }
-
-        li.suggestion.active {
-            font-size: 2em;
-        }
-
-        li.suggestion {
-            height: 2em;
-            line-height: 2em;
-        }
-
-        ul {
-            list-style-type: none;
-        }
-
-        #search-box {
-            border: none;
-        }
-
-        #search-box:focus {
-            outline: none;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="MAIN.css">
 </head>
 
 <body>
     <h1>wordkat</h1>
 
     <input type="text" placeholder=" Type a word here..." name="search-box" id="search-box" autofocus>
+    <article id="definition-container">
+
+    </article>
+
     <ul id="autocomplete-suggestions">
+
 
     </ul>
     <article id="definition-container">
