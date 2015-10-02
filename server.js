@@ -2,7 +2,7 @@ var wordkat = (function() {
 
     var http = require('http');
     var fs = require('fs');
-    var PORT = 8000;
+    //var PORT = 8000;
     var index = fs.readFileSync(__dirname + '/index.html');
     var frontendtests = fs.readFileSync(__dirname + '/tests/frontendtests.html');
     var frontendtestsjs = fs.readFileSync(__dirname + '/tests/frontendtests.js');
@@ -77,7 +77,6 @@ var wordkat = (function() {
 
         }
 
-        console.log(request.url);
     }
 
 
@@ -86,7 +85,7 @@ var wordkat = (function() {
 
 
     var server = http.createServer(handler);
-    server.listen(process.env.PORT || PORT);
+    server.listen(process.env.PORT); //|| PORT);
 
     return {
         handler: handler
