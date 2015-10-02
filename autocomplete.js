@@ -1,4 +1,4 @@
-var acjs = (function() {
+var acServerside = (function() {
 
   var filter_word = function(word_content, word_array) {
       return word_array.filter(function(word) {
@@ -10,11 +10,10 @@ var acjs = (function() {
 
   return {
     filter_word: filter_word
-
   };
 
 
   //when add additional letter added return a request using the previous 3 letters and a fourth
 }());
 
-module.exports = acjs;
+module.exports = acServerside;
