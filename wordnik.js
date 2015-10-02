@@ -13,13 +13,13 @@ function wnRequest(searchTerm, callback) {
     var wordnikurl = "http://api.wordnik.com:80/v4/word.json/" + searchTerm + "/definitions?limit=200&includeRelated=true&useCanonical=false&includeTags=false&api_key=83916c7411db7255406860c49b9083f65a950aff27e3c6a5d";
     request.get(wordnikurl, function(error, response, body) {
         if (error) {
-            return console.log('Error:', error);
+            return
         }
         if (response.statusCode !== 200) {
-            return console.log('Invalid Status Code Returned:', response.statusCode);
+            return
         } else {
             var object = JSON.parse(body);
-            //console.log(object[0].text);
+            
             if (!object[0]) {
                 callback('Sorry, this word is way too obscure for kat4... Search for "cat" instead.');
 
