@@ -7,7 +7,7 @@
     -ms-transition: font-size: 0.3s ease;
 }
 body {
-    font-family: helvetica, arial, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
 }
 li.suggestion.active {
     font-size: 2em;
@@ -22,6 +22,7 @@ ul {
 #search-box {
     border: none;
     font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
 }
 #search-box:focus {
     outline: none;
