@@ -69,3 +69,5 @@ Auto-complete and dictionary app from team kat4!
 - nodemon
 - shot
 - tape
+
+![wordkat](https://cloud.githubusercontent.com/assets/9272148/10267727/daef3a08-6a97-11e5-8921-f55bd9e1bee8.jpeg)
