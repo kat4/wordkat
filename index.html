@@ -3,26 +3,20 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>WORDKAT</title>
+    <title>Word Search App</title>
     <link rel="stylesheet" type="text/css" href="MAIN.css">
     <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
 </head>
 
 <body>
     <h1>Word Search App</h1>
-
-    <input type="text" placeholder=" Type a word here..." name="search-box" id="search-box" autofocus>
-    <article id="definition-container">
-
-    </article>
-
-    <ul id="autocomplete-suggestions">
-
-
-    </ul>
-    <article id="definition-container">
-
-    </article>
+    <div class="search-container">
+        <input type="text" placeholder=" Type a word here..." name="search-box" id="search-box" autofocus>
+    </div>
+    <div class="content-container">
+        <ul id="autocomplete-suggestions"></ul>
+        <article id="definition-container"></article>
+    </div>
     <script src="/js/wn.js"></script>
     <script src="/js/ac.js"></script>
 </body>
