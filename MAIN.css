@@ -39,8 +39,9 @@ ul {
     list-style-type: none;
     display: inline-block;
     padding: 0;
-    width: 30%;
-    margin: 0 0.3em 0 0;
+    width: 50%;
+    margin: 0;
+    text-align: center;
 }
 #search-box {
     border: none;
@@ -49,6 +50,7 @@ ul {
     opacity: 0.7;
     border-radius: 4px;
     padding: 0.3em;
+    margin-left: 18%;
 }
 #search-box:focus {
     outline: none;
@@ -59,4 +61,5 @@ ul {
   width: 50%;
   float: right;
   font-size: 2em;
+  text-align: center;
 }
