@@ -6,7 +6,7 @@
     -o-transition: font-size: 0.3s ease;
     -ms-transition: font-size: 0.3s ease;
 }
-html{
+html {
   background: url('assets/dictionarysplash.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -14,7 +14,11 @@ html{
   background-size: cover;
 }
 body {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Courgette', Georgia, Times, Times New Roman, serif;
+    color: #ffede2;
+}
+h1 {
+  text-align: center;
 }
 li.suggestion.active {
     font-size: 2em;
@@ -28,17 +32,21 @@ ul {
 }
 #search-box {
     border: none;
-    font-size: 20px;
-    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5em;
+    font-family: 'Courgette', Georgia, Times, Times New Roman, serif;
+    opacity: 0.6;
+    border-radius: 4px;
+    padding: 0.3em;
 }
 #search-box:focus {
     outline: none;
+    padding: 0.3em;
 }
 #definition-container {
-  margin-right: 30%;
+  margin-right: 15%;
   height: 30%;
   width: 30%;
   float: right;
-  font-size: 40px;
-  font-style: "Courier New", Courier, monospace;
+  font-size: 2em;
+  padding: 1em;
 }
