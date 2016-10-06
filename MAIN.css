@@ -68,3 +68,8 @@ ul {
   font-size: 2em;
   text-align: center;
 }
+@media (max-width: 600px) {
+  #search-box {
+    margin: 0;
+  }
+}
