@@ -17,7 +17,7 @@ function wnRequest(searchTerm, callback) {
             var object = JSON.parse(body);
 
             if (!object[0]) {
-                callback('Sorry, this word is way too obscure for kat4... Search for "cat" instead.');
+                callback('Sorry, this word is too obscure for the wordnik API... Please try again.');
 
             } else {
                 callback(object[0].text);
